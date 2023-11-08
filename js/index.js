@@ -1,18 +1,67 @@
+
+
+
+
+//Cotizador
+
 function convertir(){
-   const PESOS = parseInt(document.getElementById("valor").value);
-   const RESULTADO = 0; 
-   const DOLAR = 980;
-   const EURO = 1320;
-   if (document.getElementById("divisa-1").checked){
-    RESULTADO = PESOS/DOLAR;
-    alert ("El cambio de pesos a dolares es: USD" + RESULTADO)
-   }
-   else if (document.getElementById("divisa-2").checked){
-    RESULTADO = PESOS/EURO;
-    alert("El cambio de pesos a euros es:EU" + RESULTADO);
+   let valor = parseFloat(document.getElementById("valor").value);
+   let resultado = 0; 
+   let dolar = 980;
+   let euro= 1100;
+   let pesoUruguayo = 25;
+   let real= 240;
+   
+   if (document.getElementById("divisaUno").checked){
+    resultado = valor / dolar;
+    alert("El cambio de Pesos a Dolares es:"+ "" + resultado.toFixed(2));
    }
    
+   else if (document.getElementById("divisaDos").checked){
+    resultado = valor / euro;
+    alert("El cambio de Pesos a Euros es:" + "" + resultado.toFixed(2));
+   }
+   else if (document.getElementById("divisaTres").checked){
+    resultado = valor / pesoUruguayo;
+    alert("El cambio de Pesos a Euros es:" + "" + resultado.toFixed(2));
+   }
+    else if (document.getElementById("divisaCuatro").checked){
+     resultado = valor / real;
+     alert("El cambio de Pesos a Euros es:" + "" + resultado.toFixed(2));
+    }
     else{
     alert ("Completa los campos solicitados");
-   }
+   
+}
+}
+ convertir ()
+
+
+
+//Ingreso
+
+ const NOMBRE = "nombre";
+const PASSWORD = "password";
+
+let nombreUsuario = prompt("Ingresa tu nombre de usuario:");
+let passwordIngresada = prompt("Ingresa tu contraseña:");
+
+while (nombreUsuario !== NOMBRE || passwordIngresada !== PASSWORD) {
+  if (nombreUsuario === null || passwordIngresada === null) {
+    alert("No puedes iniciar sesion.");
+    break;
+  } 
+  else if (nombreUsuario === "" || passwordIngresada === "") {
+    alert("Por favor, completa todos los campos.");
+  } 
+  else {
+    alert("Nombre de usuario o contraseña incorrectos.");
+  }
+
+  nombreUsuario = prompt("Ingresa tu nombre de usuario:");
+  passwordIngresada = prompt("Ingresa tu contraseña:");
+}
+
+if (nombreUsuario === NOMBRE && passwordIngresada === PASSWORD) {
+  alert("Has iniciado sesion! Bienvenido!!");
 }

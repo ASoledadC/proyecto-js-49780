@@ -8,29 +8,70 @@
 </head>
 <body>
     <header>
-
-    </header>
+      <div><img src="./assets/logoryc.jpg">
+    </div>
+        <div>
+              <nav class="navbar navbar-expand-lg bg-body-emphasis">
+                <div class="container-fluid ">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+                  <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-primary ">
+                      <li class="nav-item ">
+                        <a href="#">Inicio</a></li>
+                      </li>
+                      <li class="nav-item">
+                        <li><a href="./pages/Ingreso.html">Ingreso</a></li>
+                      </li>
+                      <li class="nav-item">
+                        <li><a href="./pages/Registro">Registro</a></li>
+                      </li>
+                    </ul>
+                    
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header>
     <main>
-        <section>
+        <section class="seccion-uno">
             <div>
                 <h1>RyC Cambio</h1>
                 <h2>Cotizacion del dia</h2>
             </div>
             <div>
-                <h2>Cotizador</h2>
-                <h4>Calcule la oparecion que desea realizar:</h4>
+                <h2>Cotizador de monedas</h2>
+                <h4>Calcule la operacion que desea realizar:</h4>
            <form  class="formulario">
             <p>Seleccionar moneda a convertir:</p>
-            <input type="radio" name="cambio" id="divisa-1">Dolar
-            <input type="radio" name="cambio" id="divisa-2">Euro
+            <input type= "radio" name= "cambio" id= "divisaUno">Dolar
+            <input type= "radio" name= "cambio" id= "divisaDos">Euro
+            <input type= "radio" name= "cambio" id= "divisaTres">Peso uruguayo
+            <input type= "radio" name= "cambio" id= "divisaCuatro">Real
             <p>Ingrese monto:</p>
-            <input type="number" id="valor" min="1" max="100.000">
-            <input type="button" id="Cotizador" value="Cotizar" anclick="convertir" >
+            <input type="number" id= "valor" min="0" max="500000">
+            <input type="button" id= "Cotizador" value= "Cotizar" onclick= "convertir()" >
            </form>
            
             </div>
         </section>
-
+<section class="seccion-dos">
+    <ul class="seccion-ingreso">
+        <div class="Ingresa-aqui">
+            <h1>Contactanos</h1>
+            <p>Envianos tu consulta y a la brevedad estaremos en contacto con vos. ¡Muchas gracias!</p>
+        </div>
+        <form action class="ingresar-class">
+            <fieldset>
+                <input type="email" name="correo" placeholder="Email" required>
+                <input type="password" name="contraseña" placeholder="contraseña" required>
+                <input type="enviar" name="enviar" id="enviar" placeholder="enviar">
+            </fieldset>
+        </form>
+    </ul>
+</section>
 
 
     </main>

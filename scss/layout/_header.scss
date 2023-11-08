@@ -1,0 +1,41 @@
+header {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+   border-bottom: 2px solid yellow;
+    align-items: center;
+    justify-content: space-between;
+         div{
+              img{
+        width: 6.25rem;
+       height: 6.25rem;
+       margin-top: 1.25rem;
+       margin-left: 1.25rem; 
+       border-radius: 50px;
+    }
+        .navbar {
+               li {
+            text-indent: 15px;
+        
+                     a{
+            list-style: none;
+            text-transform: capitalize;
+            text-decoration: none;
+            font-size: 1.25rem;
+            color: yellow;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 1.25rem;
+            margin-top: 1.25rem;
+            font-family: Arial, Helvetica, sans-serif;
+                 &:hover{
+                color: white;
+                box-shadow: 3px 2px 15px;  
+                } 
+        }
+    }    
+ }
+}
+}
