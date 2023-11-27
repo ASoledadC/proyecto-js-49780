@@ -1,6 +1,26 @@
 
 
+class Galeria{
+  constructor(nombre, img){
+    this. ryccambio = nombre;
+    this.img = img
+  }
+}
+const AGENCIA = new Imagen("tu agencia", "tuagencia.jpg");
+const ARBOL = new Imagen("arbol ryc", "arbolryc.jpg")
+const DIVISAS = new Imagen("divisas", "divisas.jpg")
 
+const ArrayImagenes = [AGENCIA, ARBOL, DIVISAS];
+
+ArrayImagenes.forEach(Imagen =>{
+  const DIV = document.createElement("div");
+  DIV.className = "card";
+  DIV.innerHTML= `<p> rycCambio: ${Imagen.ryccambio}</p>
+  <img src= "${Imagen.img}"/>  
+  <button>Mas informacion</button>`
+
+  contenedorImagenes.appendChild("div");
+})
 
 //Cotizador
 
@@ -40,7 +60,7 @@ function convertir(){
 
 //Ingreso
 
- const NOMBRE = "nombre";
+/* const NOMBRE = "nombre";
 const PASSWORD = "password";
 
 let nombreUsuario = prompt("Ingresa tu nombre de usuario:");
@@ -63,5 +83,8 @@ while (nombreUsuario !== NOMBRE || passwordIngresada !== PASSWORD) {
 }
 
 if (nombreUsuario === NOMBRE && passwordIngresada === PASSWORD) {
-  alert("Has iniciado sesion! Bienvenido!!");
-}
+  alert("Has iniciado sesion! Bienvenido!!");*/
+
+
+
+

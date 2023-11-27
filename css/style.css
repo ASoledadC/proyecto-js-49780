@@ -1,3 +1,8 @@
+/*@mixin active ($background, $border, $box-shadow) {
+    background-color: $background;
+    border: $border;
+    box-shadow: $box-shadow;
+}*/
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +15,13 @@ ul {
 
 header {
   display: flex;
-  background-color: black;
+  background-color: rgb(4, 4, 58);
   width: 100%;
   height: auto;
   margin: 0 auto;
   padding: 1rem;
-  border-bottom: 2px solid yellow;
+  border-bottom: 3px solid blue;
+  border-radius: 0px 20px 20px;
   align-items: center;
   justify-content: space-between;
 }
@@ -24,7 +30,6 @@ header div img {
   height: 6.25rem;
   margin-top: 1.25rem;
   margin-left: 1.25rem;
-  border-radius: 50px;
 }
 header div .navbar li {
   text-indent: 15px;
@@ -34,18 +39,17 @@ header div .navbar li a {
   text-transform: capitalize;
   text-decoration: none;
   font-size: 1.25rem;
-  color: yellow;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   padding: 1.25rem;
   margin-top: 1.25rem;
-  font-family: Arial, Helvetica, sans-serif;
 }
 header div .navbar li a:hover {
   color: white;
   box-shadow: 3px 2px 15px;
 }
 
-main {
+.seccion-uno {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,7 +58,171 @@ main {
   width: 100%;
   height: 100vh;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: white;
+}
+.seccion-uno .card {
+  width: 350px;
+  height: 50%;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2 px 2px 5px grey;
+}
+.seccion-uno .cotizadorMonedas {
+  width: 60%;
+  height: 80vh;
+  padding-top: 20px;
+  background-color: rgb(242, 221, 181);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.625rem;
+}
+.seccion-uno .cotizadorMonedas h1 {
+  font-size: 20px;
+}
+.seccion-uno .cotizadorMonedas .formulario {
+  padding: 30px 40px 50px;
+  width: 100%;
+  max-width: 80%;
+  background-color: rgb(4, 4, 58);
+  text-align: center;
+  border-radius: 1.625rem;
+  font-size: 20px;
+  color: azure;
+  margin: 20px;
+}
+.seccion-uno .cotizadorMonedas .formulario .group-input li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3px;
+  border: 1px solid #FFD700;
+  border-radius: 5px;
+  border-bottom: 3px 4px;
+}
+
+.seccion-registro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+.seccion-registro div h1 {
+  font-size: 40px;
+}
+.seccion-registro div h2 {
+  font-size: 30px;
+}
+.seccion-registro .container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(245, 243, 243);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seccion-registro .container .form-contenedor {
+  width: 100%;
+  max-width: 450px;
+  background-color: rgb(2, 2, 62);
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 1.625rem;
+}
+.seccion-registro .container .form-contenedor h1 {
+  font-size: 1.875rem;
+  margin-bottom: 3.75rem;
+  color: azure;
+  position: relative;
+}
+.seccion-registro .container .form-contenedor h1::after {
+  content: "";
+  width: 30px;
+  height: 5px;
+  border-radius: 3px;
+  background: #FFD700;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.seccion-registro .container .form-contenedor p {
+  color: azure;
+  text-align: left;
+  font-size: 12px;
+}
+.seccion-registro .container .form-contenedor p a {
+  color: #FFD700;
+  margin-left: 5px;
+}
+.seccion-registro .container .form-contenedor .input-group {
+  height: 300px;
+}
+.seccion-registro .container .form-contenedor .input-group .input-field {
+  width: 100%;
+  background-color: rgb(134, 134, 92);
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+.seccion-registro .container .form-contenedor .input-group .input-field i {
+  margin-left: 15px;
+  color: #FFD700;
+}
+.seccion-registro .container .form-contenedor .input-group .input-field input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding: 17px 15px;
+  color: blue;
+}
+.seccion-registro .container .form-contenedor .input-group .input-field input::placeholder {
+  color: azure;
+}
+.seccion-registro .container .form-contenedor .btn-field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.seccion-registro .container .form-contenedor .btn-field button {
+  flex-basis: 45%;
+  font-size: 0.9375rem;
+  background-color: #FFD700;
+  color: black;
+  height: 35px;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+}
+.seccion-registro .container .form-contenedor .btn-field .desactivar {
+  background-color: rgb(190, 188, 188);
+  color: azure;
+}
+
+.container-pie-pagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 9.375rem;
+  padding-bottom: 1.25rem;
+}
+.container-pie-pagina .redes {
+  justify-content: right;
+  text-align: right;
+  padding-right: 1.25rem;
+  padding-top: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

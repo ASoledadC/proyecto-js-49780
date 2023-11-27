@@ -1,0 +1,118 @@
+//Inicio-Registro
+.seccion-registro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+        div{
+             h1{
+            font-size: 40px;
+              }
+            h2{
+            font-size: 30px;
+             }
+           }
+
+     .container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(245, 243, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+        .form-contenedor{
+        width: 100%;
+        max-width: 450px;
+        background-color: rgb(2, 2, 62);
+        padding:50px 60px 70px;
+        text-align: center;
+        border-radius: 1.625rem;
+        
+               h1{
+            font-size: 1.875rem;
+            margin-bottom: 3.75rem;
+            color: azure;
+            position: relative;
+            &::after{
+            content: "";
+                width: 30px;
+                height: 5px;
+                border-radius: 3px;
+                background: #FFD700;
+                position: absolute;
+                bottom: -12px;
+                left: 50%;
+                transform: translateX(-50%);
+    
+                  }
+                }
+                 p{
+            color: azure; 
+            text-align: left;
+            font-size: 12px;
+
+                  a{
+                color:#FFD700 ;
+                margin-left: 5px;
+                 }
+                 } 
+             .input-group{
+             height: 300px;
+             
+               .input-field{
+              width: 100%;
+             background-color:  rgb(134, 134, 92);
+             margin: 15px 0;
+             border-radius: 3px;
+             display: flex;
+             align-items: center;
+             transition: max-height 0.5s;
+             overflow: hidden;
+                   i{
+            margin-left: 15px;
+            color: #FFD700;
+                   }
+    
+                input{
+              width: 100%;
+              background: transparent;
+              border: 0;
+              outline: none;
+              padding: 17px 15px;
+              color: blue;
+                   &::placeholder{
+                    color: azure;   
+                          }
+                   }
+            }
+          }
+         .btn-field{
+       width: 100%; 
+       display: flex;
+       justify-content: space-between;
+               button{
+            flex-basis: 45%;
+            font-size: .9375rem;
+            background-color: #FFD700;
+            color:black;
+            height: 35px;
+            border-radius: 8px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            transition: background 1s;
+        } 
+    
+           .desactivar{
+            background-color: rgb(190, 188, 188);
+            color: azure;
+                  } 
+                }   
+    }
+
+      }
+    }
+
