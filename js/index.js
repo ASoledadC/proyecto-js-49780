@@ -1,27 +1,27 @@
 
 
-class Galeria{
+class Publicidad{
   constructor(nombre, img){
-    this. ryccambio = nombre;
-    this.img = img
+    this.marca = nombre;
+    this.img = img;
   }
 }
-const AGENCIA = new Imagen("tu agencia", "tuagencia.jpg");
-const ARBOL = new Imagen("arbol ryc", "arbolryc.jpg")
-const DIVISAS = new Imagen("divisas", "divisas.jpg")
+const AGENCIA = new Publicidad("tu agencia", "../assets/tu-agencia.jpg");
+const ARBOL = new Publicidad("arbol ryc", "../assets/arbol-ryc.jpg")
+const DIVISAS = new Publicidad("divisas", "../assets/divisas.jpg")
 
-const ArrayImagenes = [AGENCIA, ARBOL, DIVISAS];
+const ArrayPublicidades = [AGENCIA, ARBOL, DIVISAS];
 
-ArrayImagenes.forEach(Imagen =>{
-  const DIV = document.createElement("div");
-  DIV.className = "card";
-  DIV.innerHTML= `<p> rycCambio: ${Imagen.ryccambio}</p>
-  <img src= "${Imagen.img}"/>  
-  <button>Mas informacion</button>`
-
-  contenedorImagenes.appendChild("div");
+ArrayPublicidades.forEach(Publicidad =>{
+  let div= document.createElement("div");
+  div.className = "card";
+  div.innerHTML= `
+  <p> nombre: ${Publicidad.marca}</p>
+  <img src= "${Publicidad.img}"/>  
+  <button>Mas informacion</button>
+                        `
+  contenedorPublicidad. appenChild(div); 
 })
-
 //Cotizador
 
 function convertir(){
