@@ -1,14 +1,19 @@
 
 
+//titulo desde js
+let container = document.getElementById("contenedor");
+container.innerHTML= "<h1>RyC Cambio</h1><h3> Servicios financieros</h3>"
+
+//imagenes- ver modificar, lo hice para aplicar card desde js
 class Publicidad{
   constructor(nombre, img){
     this.marca = nombre;
     this.img = img;
   }
 }
-const AGENCIA = new Publicidad("tu agencia", "../assets/tu-agencia.jpg");
-const ARBOL = new Publicidad("arbol ryc", "../assets/arbol-ryc.jpg")
-const DIVISAS = new Publicidad("divisas", "../assets/divisas.jpg")
+const AGENCIA = new Publicidad("tu agencia", "./assets/tu-agencia.jpg");
+const ARBOL = new Publicidad("arbol ryc", "./assets/arbol-ryc.jpg")
+const DIVISAS = new Publicidad("divisas", "./assets/divisas.jpg")
 
 const ArrayPublicidades = [AGENCIA, ARBOL, DIVISAS];
 
@@ -20,7 +25,7 @@ ArrayPublicidades.forEach(Publicidad =>{
   <img src= "${Publicidad.img}"/>  
   <button>Mas informacion</button>
                         `
-  contenedorPublicidad. appenChild(div); 
+  contenedorPublicidades. appendChild(div); 
 })
 //Cotizador
 

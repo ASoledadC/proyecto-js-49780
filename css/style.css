@@ -49,25 +49,74 @@ header div .navbar li a:hover {
   box-shadow: 3px 2px 15px;
 }
 
-.seccion-uno {
+.seccionUno-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: justify;
+  justify-content: flex-end;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-  flex-wrap: wrap;
   background-color: white;
 }
-.seccion-uno .card {
-  width: 350px;
-  height: 50%;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 2 px 2px 5px grey;
+.seccionUno-container .reloj-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-top: 20px;
 }
-.seccion-uno .cotizadorMonedas {
+.seccionUno-container .reloj-container .fecha {
+  padding-bottom: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  color: black;
+  position: absolute;
+}
+.seccionUno-container .reloj-container .tiempo {
+  padding-top: 30px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  color: blue;
+  position: absolute;
+}
+.seccionUno-container #contenedor {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.seccionUno-container #contenedor h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 30px;
+}
+.seccionUno-container #contenedor h1 h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin: 30px;
+  padding: 30px;
+}
+.seccionUno-container #contenedorPublicidades {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 90px;
+  margin: 30px;
+}
+.seccionUno-container .card {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px blue;
+  padding: 20px;
+  margin: 20px 20px;
+}
+
+.cotizadorMonedas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60%;
   height: 80vh;
   padding-top: 20px;
@@ -77,11 +126,12 @@ header div .navbar li a:hover {
   align-items: center;
   justify-content: center;
   border-radius: 1.625rem;
+  margin: 30px;
 }
-.seccion-uno .cotizadorMonedas h1 {
+.cotizadorMonedas h1 {
   font-size: 20px;
 }
-.seccion-uno .cotizadorMonedas .formulario {
+.cotizadorMonedas .formulario {
   padding: 30px 40px 50px;
   width: 100%;
   max-width: 80%;
@@ -92,7 +142,7 @@ header div .navbar li a:hover {
   color: azure;
   margin: 20px;
 }
-.seccion-uno .cotizadorMonedas .formulario .group-input li {
+.cotizadorMonedas .formulario .group-input li {
   display: flex;
   flex-direction: row;
   justify-content: center;
