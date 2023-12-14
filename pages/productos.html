@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>CASA DE CAMBIO</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+      <div><img src="../assets/chanchitos.png">
+    </div>
+        <div>
+              <nav class="navbar navbar-expand-lg bg-body-emphasis">
+                <div class="container-fluid ">
+                  <button class="navbar-toggler icon-bar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+                  <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-primary ">
+                      <li class="nav-item ">
+                        <a href="../index.html">Inicio</a></li>
+                      </li>
+                      <li class="nav-item">
+                        <li><a href="#">Productos</a></li>
+                      </li>
+                      <li class="nav-item">
+                        <li><a href="./registro.html">Ingreso</a></li>
+                      </li>
+                      <button class="modoOscuro" id="modoOscuro">
+                        <span><i class='fa-solid fa-sun'></i></span>
+                        <span><i class='fa-solid fa-moon'></i></span>
+                      </button>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header>  
+<main>
+  <section class="container-imagenes" >
+    <div>
+      <h1 class="h1Productos"><span>Prestamos a Emprendedores</span></h1> 
+      <button class="boton-info" id="buttonInfo" type="button">Consultar</button> 
+      </div>
+  <div class="galeria-box" id="boxImg">
+    <img src="../assets/logo-ryc.jpg" id="galeriaImg" alt="logoryc">
+    <span onclick="closeImg()">X</span>
+  </div>
+
+        <div class="galeriaImagenes">
+          <img class="classImg" src="../assets/logo-ryc.jpg" onclick= "openImg(this.src)" alt="logoryc">
+         <img class="classImg"  src="../assets/Imagenprest2.jpg" onclick= "openImg(this.src)" alt="Imagenprest2" >
+         <img class="classImg" src="../assets/Imagenprest3.jpg" onclick= "openImg(this.src)" alt="Imagenprest3"> 
+         <img class="classImg" src="../assets/Imagenprest4.jpg" onclick= "openImg(this.src)" alt="Imagenprest4" >
+         <img class="classImg" src="../assets/prestamos2.jpg" onclick= "openImg(this.src)" alt="prestamos2">
+         <img class="classImg" src="../assets/arbol-ryc.jpg" onclick= "openImg(this.src)" alt="arbolryc">
+         <img class="classImg" src="../assets/prestamos3.jpg" onclick= "openImg(this.src)" alt="prestamos3"> 
+         <img class="classImg" src="../assets/logo-ryc.jpg" onclick= "openImg(this.src)" alt="logoryc"> 
+
+        </div>
+
+      </section>
+    </main>
+    <footer class="container-pie-pagina">    
+      <div class="redes">
+        
+          <a href=""></a>
+              <img src="../assets/instagram.png" alt="Instagram"></a>
+          <a href="https://wa.me/message/U7HJCYO6MSLVN1" target="_blank">
+              <img src="../assets/whatsapp.png" alt="whatsapp"></a>
+      </div>
+    
+    </footer>
+   
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>   
+    
+        <script src= "../js/registro.js"></script> 
+        <script src="../js/modoOscuro.js"></script> 
+       
+    </body>
+    </html>

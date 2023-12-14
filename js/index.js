@@ -11,9 +11,9 @@ class Publicidad{
     this.img = img;
   }
 }
-const AGENCIA = new Publicidad("tu agencia", "./assets/tu-agencia.jpg");
-const ARBOL = new Publicidad("arbol ryc", "./assets/arbol-ryc.jpg")
-const DIVISAS = new Publicidad("divisas", "./assets/divisas.jpg")
+const AGENCIA = new Publicidad("Divisas", "./assets/reales.jpg");
+const ARBOL = new Publicidad("RyC Cambio", "./assets/tu-agencia.jpg")
+const DIVISAS = new Publicidad("Tu Agencia", "./assets/divisas.jpg")
 
 const ArrayPublicidades = [AGENCIA, ARBOL, DIVISAS];
 
@@ -24,6 +24,8 @@ ArrayPublicidades.forEach(Publicidad =>{
   <p> nombre: ${Publicidad.marca}</p>
   <img src= "${Publicidad.img}"/>  
   <button>Mas informacion</button>
+  <h2> Registrate y conoce todos nuestros servicios!<h2>
+  
                         `
   contenedorPublicidades. appendChild(div); 
 })

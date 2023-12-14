@@ -1,0 +1,101 @@
+
+    .container-imagenes{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+       
+            div{
+                .h1Productos{
+                    text-align: center;
+                    position: relative;
+                    width: 80%;
+                    margin: 30px auto;
+                          &::before{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        position: absolute;
+                        background-color: black;
+                        top: 50%;
+                        z-index: -1;
+                            }
+                            span{
+                                background-color: white;
+                                padding: 0 15px;
+                            }
+                        }
+                          #buttonInfo{
+                            display: block;
+                            align-items: center;
+                            text-align: center;
+                            justify-content: center;
+                                  background-color: red;
+                                  border: 1px solid black;
+                                  border-radius: 5px;
+                                  width: 40%;
+                                  height: 2%;
+                                  padding: 10px;
+                                  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                  color: black;
+                                 margin: auto;
+                                 
+                                  font-size: 150%;
+                                  
+                                        }
+                        
+                                }
+                            
+            
+               .galeria-box{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.598);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 80;
+                   #boxImg{
+                    width: 80%;
+                    max-width: 250px;
+                      }
+                    span{
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        font-size: 30px;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+       
+             .galeriaImagenes{
+            width: 80%;
+            margin: 50px auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+                 gap: 30px;
+                
+                        .classImg{
+                     max-width: 100%;
+                     height: 100%;
+                     cursor: pointer;
+                     transition: 1s; 
+                     &:hover{
+                        transform: scale(1.2);
+                     }
+                     
+    
+              
+                
+            
+                  
+    }
+    
+             }
+            

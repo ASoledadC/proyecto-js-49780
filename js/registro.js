@@ -15,3 +15,14 @@ reGistro.onclick = function(){
     reGistro.classList.remove("desactivar");
     inIcio.classList.add("desactivar");
 }
+
+const GALERIABOX = document.getElementById("boxImg");
+const GALERIAIMG = document.getElementById("galeriaBox");
+
+function openImg(referencia){
+    boxImg.style.display= "flex";
+    galeriaImg.src= referencia
+}
+function closeImg(){
+    boxImg.style.display= "none";
+}

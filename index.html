@@ -7,6 +7,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>CASA DE CAMBIO</title>
     <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     
 </head>
 <body>
@@ -27,11 +28,15 @@
                         <a href="#">Inicio</a></li>
                       </li>
                       <li class="nav-item">
-                        <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                        <li><a href="./pages/productos.html">Productos</a></li>
                       </li>
                       <li class="nav-item">
                         <li><a href="./pages/registro.html">Ingreso</a></li>
                       </li>
+                      <button class="modoOscuro" id="modoOscuro">
+                        <span><i class='fa-solid fa-sun'></i></span>
+                        <span><i class='fa-solid fa-moon'></i></span>
+                      </button>
                     </ul>
                   </div>
                 </div>
@@ -68,23 +73,6 @@
            
             </div>
         </section>
-<!---<section class="seccion-dos">
-    <ul class="seccion-ingreso">
-        <div class="Ingresa-aqui">
-            <h1>Si aun no eres cliente puedes hacer tu registro aqui!</h1>
-            <p>Si ya eres cliente, ingresa aqui!</p>
-        </div>
-       <form action class="ingresar-class">
-            <fieldset>
-                <input type="email" name="correo" placeholder="Email" required>
-                <input type="password" name="contraseña" placeholder="contraseña" required>
-                <input type="enviar" name="enviar" id="enviar" placeholder="enviar">
-            </fieldset>
-        </form>
-    </ul>
-</section>--->
-
-
     </main>
       <footer class="container-pie-pagina">    
         <div class="redes">
@@ -105,7 +93,8 @@
 
 
     <script src= "js/index.js"></script>   
-    <script src= "js/reloj.js"></script>   
-</body>
+    <script src= "js/reloj.js"></script> 
+    <script src="js/modoOscuro.js"></script> 
+    
 </body>
 </html>
