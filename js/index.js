@@ -29,69 +29,54 @@ ArrayPublicidades.forEach(Publicidad =>{
                         `
   contenedorPublicidades. appendChild(div); 
 })
+
 //Cotizador
-
 function convertir(){
-   let valor = parseFloat(document.getElementById("valor").value);
-   let resultado = 0; 
-   let dolar = 980;
-   let euro= 1100;
-   let pesoUruguayo = 25;
-   let real= 240;
-   
-   if (document.getElementById("divisaUno").checked){
-    resultado = valor / dolar;
-    alert("El cambio de Pesos a Dolares es:"+ "" + resultado.toFixed(2));
+
+const valor= parseFloat(document.getElementById("cantidad").value);
+document.getElementById("valor").innerHTML="<b>"+valor+"</b>";
+const de=document.getElementById("de").value;
+const a=document.getElementById("a").value;
+resultado = 0; 
+   const dolar = 980;
+   const euro= 1100;
+
+   if(de==1&&a==2){
+    resultado=valor/dolar;
    }
-   
-   else if (document.getElementById("divisaDos").checked){
-    resultado = valor / euro;
-    alert("El cambio de Pesos a Euros es:" + "" + resultado.toFixed(2));
+   else if(de==1&&a==3){
+    resultado=valor/euro;
    }
-   else if (document.getElementById("divisaTres").checked){
-    resultado = valor / pesoUruguayo;
-    alert("El cambio de Pesos a Euros es:" + "" + resultado.toFixed(2));
+   else if(de==2&&a==1){
+    resultado=valor*dolar;
    }
-    else if (document.getElementById("divisaCuatro").checked){
-     resultado = valor / real;
-     alert("El cambio de Pesos a Euros es:" + "" + resultado.toFixed(2));
-    }
-    else{
-    alert ("Completa los campos solicitados");
-   
-}
-}
- convertir ()
-
-
-
-//Ingreso
-
-/* const NOMBRE = "nombre";
-const PASSWORD = "password";
-
-let nombreUsuario = prompt("Ingresa tu nombre de usuario:");
-let passwordIngresada = prompt("Ingresa tu contraseña:");
-
-while (nombreUsuario !== NOMBRE || passwordIngresada !== PASSWORD) {
-  if (nombreUsuario === null || passwordIngresada === null) {
-    alert("No puedes iniciar sesion.");
-    break;
-  } 
-  else if (nombreUsuario === "" || passwordIngresada === "") {
-    alert("Por favor, completa todos los campos.");
-  } 
-  else {
-    alert("Nombre de usuario o contraseña incorrectos.");
-  }
-
-  nombreUsuario = prompt("Ingresa tu nombre de usuario:");
-  passwordIngresada = prompt("Ingresa tu contraseña:");
+   else if(de==2&&a==3){
+    resultado=valor*(dolar/euro);
+   }
+   else if(de==3&&a==1){
+    resultado=valor*euro;
+   }
+   else if(de==3&&a==2){
+resultado=valor*(euro/dolar);
+   }
+   document.getElementById("resultado").innerHTML="Resultado:$"+resultado.toFixed(2);
 }
 
-if (nombreUsuario === NOMBRE && passwordIngresada === PASSWORD) {
-  alert("Has iniciado sesion! Bienvenido!!");*/
+const criptoYa = "https://criptoya.com/api/dolar";
+const divDolar = document.getElementById("divDolar")
 
-
-
-
+setInterval(()=>{
+fetch(criptoYa)
+.then(response => response.json())
+.then(({blue,ccl,mep, oficial, solidario,qatar})=>{
+divDolar.innerHTML=`<h2>Cotizacion del Dolar Hoy:<h2>
+<p>Dolar Oficial:${oficial}</p>
+<p>Dolar Solidario:${solidario}</p>
+<p>Dolar MEP:${mep}</p>
+<p>Dolar CCL:${ccl}</p>
+<p>Dolar Blue:${blue}</p>
+<p>Dolar Qatar:${qatar}</p>
+`
+})
+.catch(error=> console.log(error))
+},1000);

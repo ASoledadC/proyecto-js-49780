@@ -21,8 +21,11 @@ const GALERIAIMG = document.getElementById("galeriaBox");
 
 function openImg(referencia){
     boxImg.style.display= "flex";
-    galeriaImg.src= referencia
 }
 function closeImg(){
     boxImg.style.display= "none";
 }
+
+
+
+

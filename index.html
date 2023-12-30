@@ -55,26 +55,46 @@
             </div>
 
             <div class="cotizadorMonedas">
-                <h2>Cotizador de monedas</h2>
-                <h4>Calcule la operacion que desea realizar:</h4>
+                <h2>Cotizador de Divisas</h2><br>
+                <h4>Calcule la operacion que desea realizar:</h4><br> 
             
-           <form  class="formulario">
-            <p>Seleccionar moneda a convertir:</p>
-            <ul class="group-input"> 
-            <li><input type= "radio" name= "cambio" id= "divisaUno">Dolar</li>
-            <li><input type= "radio" name= "cambio" id= "divisaDos">Euro</li>
-            <li><input type= "radio" name= "cambio" id= "divisaTres">Peso uruguayo</li>
-            <li><input type= "radio" name= "cambio" id= "divisaCuatro">Real</li>
-          </ul>
-            <p>Ingrese monto:</p>
-            <input type="number" id= "valor" min="0" max="500000">
-            <input type="button" id= "Cotizador" value= "Cotizar" onclick= "convertir()" >
-           </form>
-           
+                <div class="divisas">
+                <p>MONTO:</p>
+                <input type="range" id="cantidad" min="0" max="5000" value="0"
+            onchange="convertir()">
+            <span id="valor">0</span><br>
+          <p>Convertir de:</p>
+          <select id="de" onchange="convertir()" >
+            <option value="1">Peso</option>
+            <option value="2">Dolar</option>
+            <option value="3">Euro</option>
+          </select><br>
+          <p>Convertir a:</p>
+          <select id="a"  onchange="convertir()">
+            <option value="1">Peso</option>
+            <option value="2">Dolar</option>
+            <option value="3">Euro</option>
+          </select><br>
+          <h2 id="resultado" > $0.00</h2>
+        </div> 
             </div>
         </section>
+        <section class="cotizacionHoy">
+<div id="divDolar">
+<p>Dolar Oficial:</p>
+<p>Dolar Solidario:</p>
+<p>Dolar MEP:</p>
+<p>Dolar CCL:</p>
+<p>Dolar Blue:</p>
+<p>Dolar Qatar:</p>
+</div>
+        </section>
     </main>
-      <footer class="container-pie-pagina">    
+      <footer class="container-pie-pagina">
+        <div class="datoS">
+        <p>RyC Cambio</p> 
+        <p>San Jose, Entre Rios, Argentina</p> 
+      </div>  
         <div class="redes">
             <a href="">
                 <img src="./assets/instagram.png" alt="Instagram"></a>
